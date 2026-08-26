@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=2">
 
   <script type="application/ld+json">
   {
@@ -61,20 +61,24 @@
         <img class="brand__mark" src="assets/logo.svg" alt="" width="38" height="38">
         <span class="brand__text">ICEBERG<em>dry cleaning</em></span>
       </a>
-      <nav class="nav" id="nav" aria-label="Основная навигация">
-        <a href="#uslugi">Услуги</a>
-        <a href="#do-posle">До / после</a>
-        <a href="#process">Процесс</a>
-        <a href="#tseny">Цены</a>
-        <a href="#faq">Вопросы</a>
-        <a href="#kontakty">Контакты</a>
+      <nav class="nav" id="nav" aria-label="Основная навигация" data-i18n-al="nav_al">
+        <a href="#uslugi" data-i18n="nav_serv">Услуги</a>
+        <a href="#do-posle" data-i18n="nav_ba">До / после</a>
+        <a href="#process" data-i18n="nav_proc">Процесс</a>
+        <a href="#tseny" data-i18n="nav_price">Цены</a>
+        <a href="#faq" data-i18n="nav_faq">Вопросы</a>
+        <a href="#kontakty" data-i18n="nav_cont">Контакты</a>
         <a class="nav__phone" href="tel:+77086983563">+7 708 698 35 63</a>
       </nav>
+      <div class="lang" role="group" aria-label="Язык сайта" data-i18n-al="lang_al">
+        <button type="button" data-lang="ru" class="is-active" aria-pressed="true"  lang="ru">RU</button>
+        <button type="button" data-lang="kk"                   aria-pressed="false" lang="kk">KZ</button>
+      </div>
       <a class="header__cta magnetic" href="tel:+77086983563">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-        <span>Позвонить</span>
+        <span data-i18n="call">Позвонить</span>
       </a>
-      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <button class="burger" id="burger" aria-label="Открыть меню" data-i18n-al="burger_al" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -90,22 +94,21 @@
       <div class="hero__veil" aria-hidden="true"></div>
     </div>
     <div class="hero__content">
-      <p class="hero__kicker reveal"><span class="pulse-dot" aria-hidden="true"></span>Астана · выезд на дом</p>
-      <h1 class="hero__title">
+      <p class="hero__kicker reveal" data-i18n="hero_kick"><span class="pulse-dot" aria-hidden="true"></span>Астана · выезд на дом</p>
+      <h1 class="hero__title" data-i18n="hero_h1">
         <span class="hero__line"><i>Глубокая</i> химчистка</span>
         <span class="hero__line">мягкой мебели —</span>
         <span class="hero__line hero__line--accent">у вас дома</span>
       </h1>
-      <p class="hero__sub reveal">Диваны, матрасы, ковры и коляски. Американская эко-химия,
+      <p class="hero__sub reveal" data-i18n="hero_sub">Диваны, матрасы, ковры и коляски. Американская эко-химия,
       экстракторы из Германии и Италии — достаём грязь из глубины наполнителя, а не размазываем по поверхности.</p>
       <div class="hero__actions reveal">
-        <a class="btn btn--primary magnetic" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку мебели. Подскажите, пожалуйста, цену.">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4 0-.6.1-.8l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
-          Расчёт в WhatsApp
+        <a class="btn btn--primary magnetic" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку мебели. Подскажите, пожалуйста, цену." data-wa-kk="Сәлеметсіз бе! Жиһазды химиялық тазалауға тапсырыс бергім келеді. Бағасын айтыңызшы.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4 0-.6.1-.8l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg><span data-i18n="wa_calc">Расчёт в WhatsApp</span>
         </a>
         <a class="btn btn--ghost magnetic" href="tel:+77086983563">+7 708 698 35 63</a>
       </div>
-      <ul class="hero__badges reveal" aria-label="Ключевые факты">
+      <ul class="hero__badges reveal" aria-label="Ключевые факты" data-i18n="hero_badges" data-i18n-al="hero_badges_al">
         <li><b>5 лет</b><span>на рынке Астаны</span></li>
         <li><b>11 200</b><span>подписчиков в Instagram</span></li>
         <li><b>2 сертификата</b><span>профессионального мастера</span></li>
@@ -116,14 +119,14 @@
 
   <!-- ══════════ MARQUEE ══════════ -->
   <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
+    <div class="marquee__track" data-i18n="marquee">
       <span>Диваны ❄ Кресла ❄ Матрасы ❄ Ковры ❄ Коляски ❄ Автокресла ❄ Кровати ❄ Стулья ❄ Ковролин ❄ Паровая дезинфекция ❄ </span>
       <span>Диваны ❄ Кресла ❄ Матрасы ❄ Ковры ❄ Коляски ❄ Автокресла ❄ Кровати ❄ Стулья ❄ Ковролин ❄ Паровая дезинфекция ❄ </span>
     </div>
   </div>
 
   <!-- ══════════ ЭФФЕКТ АЙСБЕРГА (scroll-driven) ══════════ -->
-  <section class="berg" id="effekt" aria-label="Эффект айсберга: 90% грязи не видно">
+  <section class="berg" id="effekt" aria-label="Эффект айсберга: 90% грязи не видно" data-i18n-al="berg_al">
     <div class="berg__sticky">
       <div class="berg__surface" aria-hidden="true">
         <img src="assets/iceberg.webp" alt="" loading="lazy" decoding="async">
@@ -131,15 +134,15 @@
       <div class="berg__deep" aria-hidden="true"></div>
       <div class="berg__waterline" aria-hidden="true"></div>
       <div class="berg__copy berg__copy--top">
-        <p class="berg__label">Эффект айсберга</p>
-        <h2>Чистота, которую видно, —<br>только вершина</h2>
+        <p class="berg__label" data-i18n="berg_label">Эффект айсберга</p>
+        <h2 data-i18n="berg_h2">Чистота, которую видно, —<br>только вершина</h2>
       </div>
       <div class="berg__copy berg__copy--bottom">
         <p class="berg__num"><span id="bergCounter">10</span><i>%</i></p>
-        <p class="berg__text">грязи живёт <b>под поверхностью</b> обивки: пыль, аллергены
+        <p class="berg__text" data-i18n="berg_text">грязи живёт <b>под поверхностью</b> обивки: пыль, аллергены
         и запахи уходят в глубину наполнителя. Поверхностная чистка их не берёт —
         экстракторная вымывает полностью.</p>
-        <a class="btn btn--primary magnetic" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу глубокую химчистку мебели. Подскажите цену.">Хочу глубокую чистку</a>
+        <a class="btn btn--primary magnetic" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу глубокую химчистку мебели. Подскажите цену." data-wa-kk="Сәлеметсіз бе! Жиһазды терең химиялық тазалау керек. Бағасын айтыңызшы." data-i18n="berg_btn">Хочу глубокую чистку</a>
       </div>
     </div>
   </section>
@@ -148,72 +151,72 @@
   <section class="services section" id="uslugi">
     <div class="container">
       <div class="section__head reveal">
-        <p class="section__label">Что чистим</p>
-        <h2 class="section__title">Всё мягкое<br>в вашем доме</h2>
-        <p class="section__note">Работаем со всеми видами тканей, включая люксовые.
+        <p class="section__label" data-i18n="serv_label">Что чистим</p>
+        <h2 class="section__title" data-i18n="serv_h2">Всё мягкое<br>в вашем доме</h2>
+        <p class="section__note" data-i18n="serv_note">Работаем со всеми видами тканей, включая люксовые.
         Нажмите на карточку — откроется WhatsApp с готовым запросом.</p>
       </div>
 
       <div class="bento">
-        <a class="card card--xl reveal" id="divany" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку дивана. Подскажите цену.">
+        <a class="card card--xl reveal" id="divany" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку дивана. Подскажите цену." data-wa-kk="Сәлеметсіз бе! Диванды химиялық тазалау керек. Бағасын айтыңызшы.">
           <img src="assets/divany.webp" alt="Кожаный диван в светлой комнате" loading="lazy" decoding="async">
           <div class="card__body">
-            <h3>Диваны</h3>
-            <p class="card__price">от <b>14 000 ₸</b> · посадочное место — 3 500 ₸</p>
+            <h3 data-i18n="c_divany_t">Диваны</h3>
+            <p class="card__price" data-i18n="c_divany_p">от <b>14 000 ₸</b> · посадочное место — 3 500 ₸</p>
           </div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card reveal" id="kresla" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка кресла. Подскажите цену.">
+        <a class="card reveal" id="kresla" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка кресла. Подскажите цену." data-wa-kk="Сәлеметсіз бе! Кресло химиялық тазалау керек. Бағасын айтыңызшы.">
           <img src="assets/kresla.webp" alt="Жёлтое мягкое кресло в интерьере" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Кресла</h3><p class="card__price"><b>3 500 ₸</b></p></div>
+          <div class="card__body"><h3 data-i18n="c_kresla_t">Кресла</h3><p class="card__price" data-i18n="c_kresla_p"><b>3 500 ₸</b></p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card reveal" id="stulya" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка стульев. Подскажите цену.">
+        <a class="card reveal" id="stulya" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка стульев. Подскажите цену." data-wa-kk="Сәлеметсіз бе! Орындықтарды химиялық тазалау керек. Бағасын айтыңызшы.">
           <img src="assets/stulya.webp" alt="Стул с серой тканевой обивкой" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Стулья</h3><p class="card__price">расчёт по фото</p></div>
+          <div class="card__body"><h3 data-i18n="c_stulya_t">Стулья</h3><p class="card__price" data-i18n="c_stulya_p">расчёт по фото</p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card card--wide reveal" id="matrasy" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка матраса. Подскажите цену по фото.">
+        <a class="card card--wide reveal" id="matrasy" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка матраса. Подскажите цену по фото." data-wa-kk="Сәлеметсіз бе! Матрасты химиялық тазалау керек. Фото бойынша бағасын айтыңызшы.">
           <img src="assets/matrasy.webp" alt="Кровать с чистым белым постельным бельём" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Матрасы</h3><p class="card__price">расчёт по фото в WhatsApp</p></div>
+          <div class="card__body"><h3 data-i18n="c_matrasy_t">Матрасы</h3><p class="card__price" data-i18n="c_matrasy_p">расчёт по фото в WhatsApp</p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card reveal" id="krovati" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка кровати (мягкая обивка/изголовье). Подскажите цену по фото.">
+        <a class="card reveal" id="krovati" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка кровати (мягкая обивка/изголовье). Подскажите цену по фото." data-wa-kk="Сәлеметсіз бе! Төсекті (жұмсақ қаптама/бас жағы) химиялық тазалау керек. Фото бойынша бағасын айтыңызшы.">
           <img src="assets/krovati.webp" alt="Кровать с мягким тканевым изголовьем" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Кровати</h3><p class="card__price">обивка и изголовья · расчёт по фото</p></div>
+          <div class="card__body"><h3 data-i18n="c_krovati_t">Кровати</h3><p class="card__price" data-i18n="c_krovati_p">обивка и изголовья · расчёт по фото</p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card card--tall reveal" id="kolyaski" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка детской коляски. Подскажите цену.">
+        <a class="card card--tall reveal" id="kolyaski" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка детской коляски. Подскажите цену." data-wa-kk="Сәлеметсіз бе! Сәби арбасын химиялық тазалау керек. Бағасын айтыңызшы.">
           <img src="assets/kolyaski.webp" alt="Малыш на чистом детском диванчике" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Детские коляски</h3><p class="card__price"><b>12 000 – 20 000 ₸</b></p></div>
+          <div class="card__body"><h3 data-i18n="c_kolyaski_t">Детские коляски</h3><p class="card__price" data-i18n="c_kolyaski_p"><b>12 000 – 20 000 ₸</b></p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card reveal" id="avtokresla" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка автокресла. Подскажите цену по фото.">
+        <a class="card reveal" id="avtokresla" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка автокресла. Подскажите цену по фото." data-wa-kk="Сәлеметсіз бе! Автокресло химиялық тазалау керек. Фото бойынша бағасын айтыңызшы.">
           <img src="assets/avtokresla.webp" alt="Салон автомобиля с кожаными сиденьями" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Автокресла</h3><p class="card__price">расчёт по фото</p></div>
+          <div class="card__body"><h3 data-i18n="c_avtokresla_t">Автокресла</h3><p class="card__price" data-i18n="c_avtokresla_p">расчёт по фото</p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card reveal" id="kovry" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка ковра. Подскажите цену.">
+        <a class="card reveal" id="kovry" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка ковра. Подскажите цену." data-wa-kk="Сәлеметсіз бе! Кілемді химиялық тазалау керек. Бағасын айтыңызшы.">
           <img src="assets/kovry.webp" alt="Свёрнутый ковёр с орнаментом крупным планом" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Ковры</h3><p class="card__price">от <b>1 000 ₸/м²</b></p></div>
+          <div class="card__body"><h3 data-i18n="c_kovry_t">Ковры</h3><p class="card__price" data-i18n="c_kovry_p">от <b>1 000 ₸/м²</b></p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card reveal" id="kovrolin" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка ковролина. Подскажите цену.">
+        <a class="card reveal" id="kovrolin" href="https://wa.me/77001119042" data-wa="Здравствуйте! Нужна химчистка ковролина. Подскажите цену." data-wa-kk="Сәлеметсіз бе! Ковролинді химиялық тазалау керек. Бағасын айтыңызшы.">
           <img src="assets/kovrolin.webp" alt="Чистка ковролина профессиональным пылесосом" loading="lazy" decoding="async">
-          <div class="card__body"><h3>Ковролин</h3><p class="card__price"><b>1 000 ₸/м²</b></p></div>
+          <div class="card__body"><h3 data-i18n="c_kovrolin_t">Ковролин</h3><p class="card__price" data-i18n="c_kovrolin_p"><b>1 000 ₸/м²</b></p></div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
-        <a class="card card--wide card--gift reveal" id="dezinfekciya" href="https://wa.me/77001119042" data-wa="Здравствуйте! Интересует паровая дезинфекция мебели. Подскажите условия.">
+        <a class="card card--wide card--gift reveal" id="dezinfekciya" href="https://wa.me/77001119042" data-wa="Здравствуйте! Интересует паровая дезинфекция мебели. Подскажите условия." data-wa-kk="Сәлеметсіз бе! Жиһазды бумен дезинфекциялау қызықтырады. Шарттарын айтыңызшы.">
           <img src="assets/dezinfekciya.webp" alt="Обработка поверхности паром и дезинфицирующим средством" loading="lazy" decoding="async">
           <div class="card__body">
-            <h3>Паровая дезинфекция</h3>
-            <p class="card__price"><b>в подарок</b> при заказе от 20 000 ₸</p>
+            <h3 data-i18n="c_dezinfekciya_t">Паровая дезинфекция</h3>
+            <p class="card__price" data-i18n="c_dezinfekciya_p"><b>в подарок</b> при заказе от 20 000 ₸</p>
           </div>
           <span class="card__arr" aria-hidden="true">→</span>
         </a>
       </div>
 
-      <p class="services__min reveal">Минимальный заказ — <b>10 000 ₸</b></p>
+      <p class="services__min reveal" data-i18n="serv_min">Минимальный заказ — <b>10 000 ₸</b></p>
     </div>
   </section>
 
@@ -221,9 +224,9 @@
   <section class="ba section section--dark" id="do-posle">
     <div class="container">
       <div class="section__head reveal">
-        <p class="section__label">Разница очевидна</p>
-        <h2 class="section__title">До <span class="thin">/</span> после</h2>
-        <p class="section__note">Потяните ползунок. Живые примеры наших работ — в Instagram,
+        <p class="section__label" data-i18n="ba_label">Разница очевидна</p>
+        <h2 class="section__title" data-i18n="ba_h2">До <span class="thin">/</span> после</h2>
+        <p class="section__note" data-i18n="ba_note">Потяните ползунок. Живые примеры наших работ — в Instagram,
         в актуальном «До и после».</p>
       </div>
       <div class="ba__frame reveal" id="baSlider" role="slider" aria-label="Сравнение до и после химчистки" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
@@ -234,16 +237,16 @@
         <div class="ba__handle" id="baHandle" aria-hidden="true">
           <span class="ba__grip"><svg viewBox="0 0 24 24" fill="none"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>
-        <span class="ba__tag ba__tag--before" aria-hidden="true">до</span>
-        <span class="ba__tag ba__tag--after" aria-hidden="true">после</span>
+        <span class="ba__tag ba__tag--before" aria-hidden="true" data-i18n="ba_before">до</span>
+        <span class="ba__tag ba__tag--after" aria-hidden="true" data-i18n="ba_after">после</span>
       </div>
       <div class="ba__thumbs reveal" id="baThumbs" role="tablist" aria-label="Выбор примера до/после">
-        <button class="ba__thumb is-active" type="button" data-pair="01" aria-label="Пример 1: диван"><img src="assets/pair-01-thumb.webp" alt="" loading="lazy" decoding="async"><span>Диван</span></button>
-        <button class="ba__thumb" type="button" data-pair="02" aria-label="Пример 2: диван из ткани"><img src="assets/pair-02-thumb.webp" alt="" loading="lazy" decoding="async"><span>Обивка</span></button>
-        <button class="ba__thumb" type="button" data-pair="03" aria-label="Пример 3: кресло"><img src="assets/pair-03-thumb.webp" alt="" loading="lazy" decoding="async"><span>Кресло</span></button>
-        <button class="ba__thumb" type="button" data-pair="04" aria-label="Пример 4: диван и ковёр"><img src="assets/pair-04-thumb.webp" alt="" loading="lazy" decoding="async"><span>Текстиль</span></button>
+        <button class="ba__thumb is-active" type="button" data-pair="01" aria-label="Пример 1: диван"><img src="assets/pair-01-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t01">Диван</span></button>
+        <button class="ba__thumb" type="button" data-pair="02" aria-label="Пример 2: диван из ткани"><img src="assets/pair-02-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t02">Обивка</span></button>
+        <button class="ba__thumb" type="button" data-pair="03" aria-label="Пример 3: кресло"><img src="assets/pair-03-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t03">Кресло</span></button>
+        <button class="ba__thumb" type="button" data-pair="04" aria-label="Пример 4: диван и ковёр"><img src="assets/pair-04-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t04">Текстиль</span></button>
       </div>
-      <p class="ba__note reveal">Фото-иллюстрация. Реальные работы смотрите в
+      <p class="ba__note reveal" data-i18n="ba_disc">Фото-иллюстрация. Реальные работы смотрите в
         <a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a> —
         хайлайт «До и после».</p>
     </div>
@@ -255,21 +258,21 @@
       <div class="process__media reveal">
         <img src="assets/process.webp" alt="Мастер выполняет экстракторную чистку профессиональным оборудованием" loading="lazy" decoding="async">
         <figure class="process__chip reveal">
-          <b>Германия · Италия</b>
-          <span>профессиональные экстракторы и пылесосы</span>
+          <b data-i18n="proc_chip_b">Германия · Италия</b>
+          <span data-i18n="proc_chip_s">профессиональные экстракторы и пылесосы</span>
         </figure>
       </div>
       <div class="process__steps">
         <div class="section__head reveal">
-          <p class="section__label">Как проходит чистка</p>
-          <h2 class="section__title">Пять шагов<br>до глубокой чистоты</h2>
+          <p class="section__label" data-i18n="proc_label">Как проходит чистка</p>
+          <h2 class="section__title" data-i18n="proc_h2">Пять шагов<br>до глубокой чистоты</h2>
         </div>
         <ol class="steps">
-          <li class="reveal"><i>01</i><div><h3>Диагностика ткани</h3><p>Определяем тип обивки и загрязнений — под них подбираем состав. Работаем со всеми тканями, включая люксовые.</p></div></li>
-          <li class="reveal"><i>02</i><div><h3>Сухая уборка</h3><p>Профессиональный пылесос собирает пыль и сухой мусор с поверхности и из складок.</p></div></li>
-          <li class="reveal"><i>03</i><div><h3>Эко-химия из США</h3><p>Наносим американский эко-состав — он расщепляет грязь в глубине волокон, а не только на поверхности.</p></div></li>
-          <li class="reveal"><i>04</i><div><h3>Экстракция</h3><p>Экстрактор вымывает раствор вместе с грязью из наполнителя — та самая «подводная часть айсберга».</p></div></li>
-          <li class="reveal"><i>05</i><div><h3>Финиш</h3><p>Убираем остатки влаги, проверяем результат вместе с вами. По запросу — паровая дезинфекция.</p></div></li>
+          <li class="reveal"><i>01</i><div><h3 data-i18n="st1_t">Диагностика ткани</h3><p data-i18n="st1_p">Определяем тип обивки и загрязнений — под них подбираем состав. Работаем со всеми тканями, включая люксовые.</p></div></li>
+          <li class="reveal"><i>02</i><div><h3 data-i18n="st2_t">Сухая уборка</h3><p data-i18n="st2_p">Профессиональный пылесос собирает пыль и сухой мусор с поверхности и из складок.</p></div></li>
+          <li class="reveal"><i>03</i><div><h3 data-i18n="st3_t">Эко-химия из США</h3><p data-i18n="st3_p">Наносим американский эко-состав — он расщепляет грязь в глубине волокон, а не только на поверхности.</p></div></li>
+          <li class="reveal"><i>04</i><div><h3 data-i18n="st4_t">Экстракция</h3><p data-i18n="st4_p">Экстрактор вымывает раствор вместе с грязью из наполнителя — та самая «подводная часть айсберга».</p></div></li>
+          <li class="reveal"><i>05</i><div><h3 data-i18n="st5_t">Финиш</h3><p data-i18n="st5_p">Убираем остатки влаги, проверяем результат вместе с вами. По запросу — паровая дезинфекция.</p></div></li>
         </ol>
       </div>
     </div>
@@ -279,20 +282,20 @@
   <section class="prices section section--frost" id="tseny">
     <div class="container prices__grid">
       <div class="section__head reveal">
-        <p class="section__label">Прайс</p>
-        <h2 class="section__title">Честные цены<br>без «сюрпризов»</h2>
-        <p class="section__note">Точную стоимость назовём по фото в WhatsApp — до выезда мастера.</p>
-        <a class="btn btn--primary magnetic reveal" href="https://wa.me/77001119042" data-wa="Здравствуйте! Отправляю фото мебели для расчёта стоимости химчистки.">Отправить фото на расчёт</a>
+        <p class="section__label" data-i18n="pr_label">Прайс</p>
+        <h2 class="section__title" data-i18n="pr_h2">Честные цены<br>без «сюрпризов»</h2>
+        <p class="section__note" data-i18n="pr_note">Точную стоимость назовём по фото в WhatsApp — до выезда мастера.</p>
+        <a class="btn btn--primary magnetic reveal" href="https://wa.me/77001119042" data-wa="Здравствуйте! Отправляю фото мебели для расчёта стоимости химчистки." data-wa-kk="Сәлеметсіз бе! Химиялық тазалау бағасын есептеу үшін жиһаздың фотосын жіберемін." data-i18n="pr_btn">Отправить фото на расчёт</a>
       </div>
       <div class="prices__list reveal">
-        <div class="prow"><span>Посадочное место</span><i></i><b>3 500 ₸</b></div>
-        <div class="prow"><span>Кресло</span><i></i><b>3 500 ₸</b></div>
-        <div class="prow"><span>Диван 3-местный</span><i></i><b>от 14 000 ₸</b></div>
-        <div class="prow"><span>Детская коляска</span><i></i><b>12 000 – 20 000 ₸</b></div>
-        <div class="prow"><span>Ковры</span><i></i><b>от 1 000 ₸/м²</b></div>
-        <div class="prow"><span>Ковролин</span><i></i><b>1 000 ₸/м²</b></div>
-        <div class="prow prow--muted"><span>Матрасы · автокресла · кровати</span><i></i><b>расчёт по фото</b></div>
-        <div class="prow prow--min"><span>Минимальный заказ</span><i></i><b>10 000 ₸</b></div>
+        <div class="prow"><span data-i18n="pr1_n">Посадочное место</span><i></i><b data-i18n="pr1_v">3 500 ₸</b></div>
+        <div class="prow"><span data-i18n="pr2_n">Кресло</span><i></i><b data-i18n="pr2_v">3 500 ₸</b></div>
+        <div class="prow"><span data-i18n="pr3_n">Диван 3-местный</span><i></i><b data-i18n="pr3_v">от 14 000 ₸</b></div>
+        <div class="prow"><span data-i18n="pr4_n">Детская коляска</span><i></i><b data-i18n="pr4_v">12 000 – 20 000 ₸</b></div>
+        <div class="prow"><span data-i18n="pr5_n">Ковры</span><i></i><b data-i18n="pr5_v">от 1 000 ₸/м²</b></div>
+        <div class="prow"><span data-i18n="pr6_n">Ковролин</span><i></i><b data-i18n="pr6_v">1 000 ₸/м²</b></div>
+        <div class="prow prow--muted"><span data-i18n="pr7_n">Матрасы · автокресла · кровати</span><i></i><b data-i18n="pr7_v">расчёт по фото</b></div>
+        <div class="prow prow--min"><span data-i18n="pr8_n">Минимальный заказ</span><i></i><b data-i18n="pr8_v">10 000 ₸</b></div>
       </div>
     </div>
   </section>
@@ -304,10 +307,10 @@
         <img src="assets/snow.webp" alt="" loading="lazy" decoding="async">
       </div>
       <div class="promo__copy">
-        <p class="section__label section__label--gold">Подарок</p>
-        <h2>Заказ от 20 000 ₸ —<br><em>паровая дезинфекция</em> мебели в подарок</h2>
-        <p>Пар убирает то, что не видно глазу. Просто скажите мастеру промокод «Айсберг» — или ничего не говорите, подарок и так ваш.</p>
-        <a class="btn btn--gold magnetic" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказ от 20 000 ₸ с паровой дезинфекцией в подарок.">Забрать подарок</a>
+        <p class="section__label section__label--gold" data-i18n="promo_label">Подарок</p>
+        <h2 data-i18n="promo_h2">Заказ от 20 000 ₸ —<br><em>паровая дезинфекция</em> мебели в подарок</h2>
+        <p data-i18n="promo_p">Пар убирает то, что не видно глазу. Просто скажите мастеру промокод «Айсберг» — или ничего не говорите, подарок и так ваш.</p>
+        <a class="btn btn--gold magnetic" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказ от 20 000 ₸ с паровой дезинфекцией в подарок." data-wa-kk="Сәлеметсіз бе! 20 000 ₸-ден жоғары тапсырыс беріп, сыйлыққа бумен дезинфекция алғым келеді." data-i18n="promo_btn">Забрать подарок</a>
       </div>
     </div>
   </section>
@@ -316,38 +319,38 @@
   <section class="trust section" id="o-nas">
     <div class="container">
       <div class="section__head reveal">
-        <p class="section__label">Почему Iceberg</p>
-        <h2 class="section__title">Мастера, которым<br>открывают дверь</h2>
+        <p class="section__label" data-i18n="tr_label">Почему Iceberg</p>
+        <h2 class="section__title" data-i18n="tr_h2">Мастера, которым<br>открывают дверь</h2>
       </div>
       <div class="trust__grid">
         <div class="trust__stats reveal">
-          <div class="stat"><b class="stat__num" data-count="5">0</b><span>лет на рынке Астаны</span></div>
-          <div class="stat"><b class="stat__num" data-count="11200">0</b><span>подписчиков в Instagram — живые работы каждый день</span></div>
-          <div class="stat"><b class="stat__num" data-count="2">0</b><span>сертификата: школа клининга (Алматы) и центр Тараса Дударя (Россия)</span></div>
-          <div class="stat"><b class="stat__num" data-count="10">0</b><span>видов услуг — от стульев до ковролина</span></div>
+          <div class="stat"><b class="stat__num" data-count="5">0</b><span data-i18n="tr_s1">лет на рынке Астаны</span></div>
+          <div class="stat"><b class="stat__num" data-count="11200">0</b><span data-i18n="tr_s2">подписчиков в Instagram — живые работы каждый день</span></div>
+          <div class="stat"><b class="stat__num" data-count="2">0</b><span data-i18n="tr_s3">сертификата: школа клининга (Алматы) и центр Тараса Дударя (Россия)</span></div>
+          <div class="stat"><b class="stat__num" data-count="10">0</b><span data-i18n="tr_s4">видов услуг — от стульев до ковролина</span></div>
         </div>
         <figure class="trust__photo reveal">
           <img src="assets/master.webp" alt="Мастер в перчатках аккуратно работает в квартире клиента" loading="lazy" decoding="async">
           <figcaption>
-            <b>Эко-химия — США</b>
-            <span>составы подбираются под каждый тип ткани</span>
+            <b data-i18n="tr_cap_b">Эко-химия — США</b>
+            <span data-i18n="tr_cap_s">составы подбираются под каждый тип ткани</span>
           </figcaption>
         </figure>
       </div>
 
       <div class="certs" id="sertifikaty">
         <div class="certs__head reveal">
-          <p class="section__label">Сертификаты</p>
-          <h3 class="certs__title">Обучение, подтверждённое документами</h3>
+          <p class="section__label" data-i18n="cert_label">Сертификаты</p>
+          <h3 class="certs__title" data-i18n="cert_h3">Обучение, подтверждённое документами</h3>
         </div>
         <div class="certs__grid">
           <figure class="cert reveal">
             <img src="assets/cert-01.webp" alt="Обучение мастера: школа клининга, Алматы" loading="lazy" decoding="async">
-            <figcaption>Школа клининга · Алматы</figcaption>
+            <figcaption data-i18n="cert_c1">Школа клининга · Алматы</figcaption>
           </figure>
           <figure class="cert reveal">
             <img src="assets/cert-02.webp" alt="Обучение мастера: центр Тараса Дударя, Россия" loading="lazy" decoding="async">
-            <figcaption>Центр Тараса Дударя · Россия</figcaption>
+            <figcaption data-i18n="cert_c2">Центр Тараса Дударя · Россия</figcaption>
           </figure>
         </div>
       </div>
@@ -358,9 +361,9 @@
   <section class="reviews section section--frost" id="otzyvy">
     <div class="container">
       <div class="section__head reveal">
-        <p class="section__label">Отзывы</p>
-        <h2 class="section__title">Нам доверяют —<br>и показывают это</h2>
-        <p class="section__note">Мы не публикуем «нарисованные» отзывы. Реальные видеоотзывы клиентов
+        <p class="section__label" data-i18n="rev_label">Отзывы</p>
+        <h2 class="section__title" data-i18n="rev_h2">Нам доверяют —<br>и показывают это</h2>
+        <p class="section__note" data-i18n="rev_note">Мы не публикуем «нарисованные» отзывы. Реальные видеоотзывы клиентов
         и результаты работ — в нашем Instagram.</p>
       </div>
       <!-- Слоты под видео: когда придут ролики клиента, карточка меняется на
@@ -370,31 +373,31 @@
           <span class="vcard__media">
             <img src="assets/video-01-poster.webp" alt="Видеоотзыв клиента о химчистке мебели" loading="lazy" decoding="async">
             <span class="vcard__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4c0 .8.9 1.3 1.6.9l10-6.2c.7-.4.7-1.4 0-1.8l-10-6.2c-.7-.4-1.6.1-1.6.9Z"/></svg></span>
-            <span class="vcard__badge">видеоотзыв</span>
+            <span class="vcard__badge" data-i18n="v1_badge">видеоотзыв</span>
           </span>
-          <span class="vcard__body"><b>«Диван как новый»</b><span>смотреть в Instagram · хайлайт «Видеоотзывы»</span></span>
+          <span class="vcard__body"><b data-i18n="v1_t">«Диван как новый»</b><span data-i18n="v1_s">смотреть в Instagram · хайлайт «Видеоотзывы»</span></span>
         </a>
         <a class="vcard reveal" href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">
           <span class="vcard__media">
             <img src="assets/video-02-poster.webp" alt="Видео процесса чистки ковролина" loading="lazy" decoding="async">
             <span class="vcard__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4c0 .8.9 1.3 1.6.9l10-6.2c.7-.4.7-1.4 0-1.8l-10-6.2c-.7-.4-1.6.1-1.6.9Z"/></svg></span>
-            <span class="vcard__badge">процесс</span>
+            <span class="vcard__badge" data-i18n="v2_badge">процесс</span>
           </span>
-          <span class="vcard__body"><b>Экстракция вживую</b><span>смотреть в Instagram · хайлайт «До и после»</span></span>
+          <span class="vcard__body"><b data-i18n="v2_t">Экстракция вживую</b><span data-i18n="v2_s">смотреть в Instagram · хайлайт «До и после»</span></span>
         </a>
         <a class="vcard reveal" href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">
           <span class="vcard__media">
             <img src="assets/video-03-poster.webp" alt="Видео результата химчистки в интерьере клиента" loading="lazy" decoding="async">
             <span class="vcard__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4c0 .8.9 1.3 1.6.9l10-6.2c.7-.4.7-1.4 0-1.8l-10-6.2c-.7-.4-1.6.1-1.6.9Z"/></svg></span>
-            <span class="vcard__badge">результат</span>
+            <span class="vcard__badge" data-i18n="v3_badge">результат</span>
           </span>
-          <span class="vcard__body"><b>Дом после Iceberg</b><span>смотреть в Instagram · лента работ</span></span>
+          <span class="vcard__body"><b data-i18n="v3_t">Дом после Iceberg</b><span data-i18n="v3_s">смотреть в Instagram · лента работ</span></span>
         </a>
       </div>
       <div class="reviews__cta reveal">
         <a class="btn btn--ghost btn--insta magnetic" href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
-          @dry_cleaning_iceberg · 11 200 подписчиков
+          <span data-i18n="rev_cta">@dry_cleaning_iceberg · 11 200 подписчиков</span>
         </a>
       </div>
     </div>
@@ -404,33 +407,33 @@
   <section class="faq section" id="faq">
     <div class="container faq__grid">
       <div class="section__head reveal">
-        <p class="section__label">Вопросы</p>
-        <h2 class="section__title">Спрашивают<br>перед заказом</h2>
+        <p class="section__label" data-i18n="faq_label">Вопросы</p>
+        <h2 class="section__title" data-i18n="faq_h2">Спрашивают<br>перед заказом</h2>
       </div>
       <div class="faq__list reveal">
         <details class="qa" open>
-          <summary>Сколько будет стоить именно моя мебель?<span class="qa__ico" aria-hidden="true"></span></summary>
-          <div class="qa__body"><p>Базовые цены — в прайсе выше: посадочное место 3 500 ₸, диван 3-местный от 14 000 ₸. Точную сумму назовём по фото в WhatsApp до выезда. Минимальный заказ — 10 000 ₸.</p></div>
+          <summary><span data-i18n="q1">Сколько будет стоить именно моя мебель?</span><span class="qa__ico" aria-hidden="true"></span></summary>
+          <div class="qa__body"><p data-i18n="a1">Базовые цены — в прайсе выше: посадочное место 3 500 ₸, диван 3-местный от 14 000 ₸. Точную сумму назовём по фото в WhatsApp до выезда. Минимальный заказ — 10 000 ₸.</p></div>
         </details>
         <details class="qa">
-          <summary>Вы правда приезжаете на дом?<span class="qa__ico" aria-hidden="true"></span></summary>
-          <div class="qa__body"><p>Да, чистим у вас дома — мебель никуда не увозим. Работаем по Астане, база — ул. Манатау, 17.</p></div>
+          <summary><span data-i18n="q2">Вы правда приезжаете на дом?</span><span class="qa__ico" aria-hidden="true"></span></summary>
+          <div class="qa__body"><p data-i18n="a2">Да, чистим у вас дома — мебель никуда не увозим. Работаем по Астане, база — ул. Манатау, 17.</p></div>
         </details>
         <details class="qa">
-          <summary>Безопасна ли химия для детей и животных?<span class="qa__ico" aria-hidden="true"></span></summary>
-          <div class="qa__body"><p>Используем американскую эко-химию, состав подбирается под тип ткани. Именно поэтому нам доверяют чистку детских колясок и матрасов.</p></div>
+          <summary><span data-i18n="q3">Безопасна ли химия для детей и животных?</span><span class="qa__ico" aria-hidden="true"></span></summary>
+          <div class="qa__body"><p data-i18n="a3">Используем американскую эко-химию, состав подбирается под тип ткани. Именно поэтому нам доверяют чистку детских колясок и матрасов.</p></div>
         </details>
         <details class="qa">
-          <summary>Работаете с дорогими и капризными тканями?<span class="qa__ico" aria-hidden="true"></span></summary>
-          <div class="qa__body"><p>Да, чистим все виды тканей, включая люксовые. Мастер прошёл обучение в школе клининга Алматы и российском центре Тараса Дударя — перед чисткой всегда делаем диагностику ткани.</p></div>
+          <summary><span data-i18n="q4">Работаете с дорогими и капризными тканями?</span><span class="qa__ico" aria-hidden="true"></span></summary>
+          <div class="qa__body"><p data-i18n="a4">Да, чистим все виды тканей, включая люксовые. Мастер прошёл обучение в школе клининга Алматы и российском центре Тараса Дударя — перед чисткой всегда делаем диагностику ткани.</p></div>
         </details>
         <details class="qa">
-          <summary>Как получить дезинфекцию в подарок?<span class="qa__ico" aria-hidden="true"></span></summary>
-          <div class="qa__body"><p>Просто наберите заказ на сумму от 20 000 ₸ — паровую дезинфекцию мебели сделаем бесплатно.</p></div>
+          <summary><span data-i18n="q5">Как получить дезинфекцию в подарок?</span><span class="qa__ico" aria-hidden="true"></span></summary>
+          <div class="qa__body"><p data-i18n="a5">Просто наберите заказ на сумму от 20 000 ₸ — паровую дезинфекцию мебели сделаем бесплатно.</p></div>
         </details>
         <details class="qa">
-          <summary>Где посмотреть ваши работы?<span class="qa__ico" aria-hidden="true"></span></summary>
-          <div class="qa__body"><p>В Instagram <a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a>: хайлайты «До и после», «Отзывы», «Видеоотзывы», «Сертификаты».</p></div>
+          <summary><span data-i18n="q6">Где посмотреть ваши работы?</span><span class="qa__ico" aria-hidden="true"></span></summary>
+          <div class="qa__body"><p data-i18n="a6">В Instagram <a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a>: хайлайты «До и после», «Отзывы», «Видеоотзывы», «Сертификаты».</p></div>
         </details>
       </div>
     </div>
@@ -440,38 +443,38 @@
   <section class="contact section section--dark" id="kontakty">
     <div class="container contact__grid">
       <div class="contact__info reveal">
-        <p class="section__label">Контакты</p>
-        <h2 class="section__title">Обсудим вашу<br>мебель?</h2>
-        <p class="section__note">Пришлите фото — посчитаем стоимость и подберём время выезда.</p>
+        <p class="section__label" data-i18n="ct_label">Контакты</p>
+        <h2 class="section__title" data-i18n="ct_h2">Обсудим вашу<br>мебель?</h2>
+        <p class="section__note" data-i18n="ct_note">Пришлите фото — посчитаем стоимость и подберём время выезда.</p>
         <ul class="contact__list">
-          <li><span>Заявки и звонки</span><a href="tel:+77086983563">+7 708 698 35 63</a></li>
-          <li><span>WhatsApp / Telegram</span><a href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку.">+7 700 111 90 42</a></li>
-          <li><span>Instagram</span><a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a></li>
-          <li><span>Адрес</span><b>Астана, ул. Манатау, 17 · выезд по всему городу</b></li>
+          <li><span data-i18n="ct_l1">Заявки и звонки</span><a href="tel:+77086983563">+7 708 698 35 63</a></li>
+          <li><span data-i18n="ct_l2">WhatsApp / Telegram</span><a href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку." data-wa-kk="Сәлеметсіз бе! Химиялық тазалауға тапсырыс бергім келеді.">+7 700 111 90 42</a></li>
+          <li><span data-i18n="ct_l3">Instagram</span><a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a></li>
+          <li><span data-i18n="ct_l4">Адрес</span><b data-i18n="ct_addr">Астана, ул. Манатау, 17 · выезд по всему городу</b></li>
         </ul>
       </div>
       <form class="contact__form reveal" id="leadForm" novalidate>
-        <p class="contact__form-title">Заявка в один клик</p>
+        <p class="contact__form-title" data-i18n="f_title">Заявка в один клик</p>
         <label class="field">
-          <span>Ваше имя</span>
-          <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться?" required>
+          <span data-i18n="f_name">Ваше имя</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться?" data-i18n-ph="f_name_ph" required>
         </label>
         <label class="field">
-          <span>Телефон</span>
-          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___ __ __" required>
+          <span data-i18n="f_phone">Телефон</span>
+          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___ __ __" data-i18n-ph="f_phone_ph" required>
         </label>
         <label class="field">
-          <span>Что нужно почистить?</span>
-          <textarea name="msg" rows="3" placeholder="Например: диван 3-местный и два кресла"></textarea>
+          <span data-i18n="f_msg">Что нужно почистить?</span>
+          <textarea name="msg" rows="3" placeholder="Например: диван 3-местный и два кресла" data-i18n-ph="f_msg_ph"></textarea>
         </label>
         <button class="btn btn--primary btn--full magnetic" type="submit">
-          Отправить в WhatsApp
+          <span data-i18n="f_send">Отправить в WhatsApp</span>
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <p class="contact__form-note">Кнопка откроет WhatsApp с готовым сообщением — ничего вводить заново не придётся.</p>
+        <p class="contact__form-note" data-i18n="f_note">Кнопка откроет WhatsApp с готовым сообщением — ничего вводить заново не придётся.</p>
         <div class="contact__thanks" id="thanks" hidden>
-          <b>Спасибо! ❄</b>
-          <p>Сообщение сформировано — досмотрите его в WhatsApp и нажмите «Отправить». Ответим быстро.</p>
+          <b data-i18n="f_thx_b">Спасибо! ❄</b>
+          <p data-i18n="f_thx_p">Сообщение сформировано — досмотрите его в WhatsApp и нажмите «Отправить». Ответим быстро.</p>
         </div>
       </form>
     </div>
@@ -486,10 +489,10 @@
         <img class="brand__mark" src="assets/logo.svg" alt="" width="38" height="38" loading="lazy">
         <span class="brand__text">ICEBERG<em>dry cleaning</em></span>
       </a>
-      <p class="footer__addr">Астана, ул. Манатау, 17<br>Выездная химчистка мягкой мебели</p>
+      <p class="footer__addr" data-i18n="foot_addr">Астана, ул. Манатау, 17<br>Выездная химчистка мягкой мебели</p>
       <div class="footer__links">
         <a href="tel:+77086983563">+7 708 698 35 63</a>
-        <a href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку.">WhatsApp</a>
+        <a href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку." data-wa-kk="Сәлеметсіз бе! Химиялық тазалауға тапсырыс бергім келеді.">WhatsApp</a>
         <a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
@@ -497,10 +500,10 @@
   </footer>
 
   <!-- плавающая кнопка WhatsApp -->
-  <a class="fab" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку мебели." aria-label="Написать в WhatsApp">
+  <a class="fab" href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку мебели." data-wa-kk="Сәлеметсіз бе! Жиһазды химиялық тазалауға тапсырыс бергім келеді." aria-label="Написать в WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4 0-.6.1-.8l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
   </a>
 
-  <script src="script.js?v=1" defer></script>
+  <script src="script.js?v=2" defer></script>
 </body>
 </html>
