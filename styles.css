@@ -121,6 +121,7 @@ body::after {
   font-style: normal; color: var(--cyan);
 }
 .nav { display: flex; align-items: center; gap: 26px; margin-left: auto; }
+.nav a, .header__cta, .brand__text, .brand__text em { white-space: nowrap; }
 .nav a {
   font: 600 14px/1 var(--font-t); color: rgba(255,255,255,.85);
   position: relative; padding: 6px 0; transition: color .25s;
@@ -705,27 +706,6 @@ body::after {
   :root { --header-h: 62px; --radius: 16px; }
   .header__cta span { display: none; }
   .header__cta { padding: 12px; }
-  .nav {
-    position: fixed; inset: 0; z-index: -1;
-    flex-direction: column; justify-content: center; gap: 8px;
-    background: rgba(4,16,26,.97); backdrop-filter: blur(16px);
-    opacity: 0; pointer-events: none; transition: opacity .35s;
-  }
-  .nav a { font: 500 26px/1.3 var(--font-d); color: #fff; padding: 10px; }
-  .nav a::after { display: none; }
-  .nav__phone { display: block !important; font: 600 18px/1 var(--font-t) !important; color: var(--cyan) !important; margin-top: 14px; }
-  body.menu-open .nav { opacity: 1; pointer-events: auto; z-index: 99; }
-  body.menu-open { overflow: hidden; }
-  .burger {
-    display: flex; flex-direction: column; justify-content: center; gap: 5px;
-    width: 44px; height: 44px; padding: 10px; border: 0; cursor: pointer;
-    background: rgba(255,255,255,.08); border-radius: 12px; z-index: 100;
-  }
-  .burger span { display: block; height: 2px; width: 100%; background: #fff; border-radius: 2px; transition: transform .35s var(--ease-out), opacity .25s; }
-  body.menu-open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  body.menu-open .burger span:nth-child(2) { opacity: 0; }
-  body.menu-open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
   .hero__content { padding-top: calc(var(--header-h) + 8vh); }
   .hero__badges { gap: 14px 22px; }
   .hero__actions .btn { flex: 1 1 100%; }
@@ -790,12 +770,56 @@ body::after {
 .lang button:hover { color: #fff; }
 .lang button.is-active { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.18); }
 .lang button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
-@media (max-width: 900px) {
+/* Порог 1080px, а не 900: казахские подписи в навигации длиннее русских
+   («Қызметтер», «Дейін / кейін», «Қоңырау шалу») и на 900–1050px переносились
+   в 2–3 строки. Выше порога строка навигации помещается на обоих языках. */
+@media (max-width: 1080px) {
   /* шапка на мобильном: бренд · язык · звонок · бургер — всё в одну строку */
   .header__inner { gap: 12px; }
   .brand { min-width: 0; }
   .lang { margin-left: auto; }
   .lang button { padding: 6px 10px; font-size: 11.5px; }
+
+  /* Меню-оверлей. Порог тот же, что у бургера (900px): раньше оверлей включался
+     только с 760px, и на 761–900px бургер уже был, а навигация оставалась строкой —
+     она наезжала на логотип и переключатель языка. */
+  .nav {
+    position: fixed; inset: 0; z-index: -1;
+    flex-direction: column; justify-content: center; gap: 8px;
+    background: rgba(4,16,26,.97); backdrop-filter: blur(16px);
+    opacity: 0; pointer-events: none; transition: opacity .35s;
+  }
+  .nav a { font: 500 26px/1.3 var(--font-d); color: #fff; padding: 10px; }
+  .nav a::after { display: none; }
+  .nav__phone { display: block !important; font: 600 18px/1 var(--font-t) !important; color: var(--cyan) !important; margin-top: 14px; }
+  body.menu-open .nav { opacity: 1; pointer-events: auto; z-index: 99; }
+  body.menu-open { overflow: hidden; }
+
+  /* 🔴 backdrop-filter на шапке делает её containing block для position:fixed внутри,
+     и оверлей меню схлопывался до высоты шапки (62px) — пункты висели над контентом
+     без подложки. Пока меню открыто, блюр у шапки выключаем; blur есть у самого оверлея.
+     backdrop-filter убран и из transition, иначе containing block живёт ещё 0.35s. */
+  body.menu-open .header,
+  body.menu-open .header.is-solid {
+    backdrop-filter: none; -webkit-backdrop-filter: none;
+    transition: background .35s, box-shadow .35s;
+  }
+
+  /* оверлей позиционирован и перекрывает непозиционированные логотип/язык/звонок —
+     поднимаем их над ним, чтобы шапка осталась рабочей при открытом меню */
+  body.menu-open .brand,
+  body.menu-open .lang,
+  body.menu-open .header__cta { position: relative; z-index: 100; }
+
+  .burger {
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px; padding: 10px; border: 0; cursor: pointer;
+    background: rgba(255,255,255,.08); border-radius: 12px; z-index: 100;
+  }
+  .burger span { display: block; height: 2px; width: 100%; background: #fff; border-radius: 2px; transition: transform .35s var(--ease-out), opacity .25s; }
+  body.menu-open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  body.menu-open .burger span:nth-child(2) { opacity: 0; }
+  body.menu-open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }
 @media (max-width: 420px) {
   .header__inner { gap: 9px; }
