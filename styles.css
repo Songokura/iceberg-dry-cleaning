@@ -397,6 +397,12 @@ body::after {
 .prow span { color: var(--ink); font-weight: 600; }
 .prow i { flex: 1; border-bottom: 2px dotted rgba(15,37,54,.18); transform: translateY(-4px); }
 .prow b { font-weight: 800; white-space: nowrap; }
+.prow--head { padding: 22px 0 8px; border-top: 0 !important; }
+.prow--head:first-child { padding-top: 4px; }
+.prow--head span {
+  font: 700 11.5px/1 var(--font-t); letter-spacing: .2em; text-transform: uppercase;
+  color: var(--cyan-d);
+}
 .prow--muted span, .prow--muted b { color: var(--muted); font-weight: 600; }
 .prow--min {
   margin-top: 10px; border-top: 0 !important;
