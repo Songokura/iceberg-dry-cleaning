@@ -336,8 +336,8 @@
 
     /* первый экран */
     hero_kick: '<span class="pulse-dot" aria-hidden="true"></span>Астана · үйге барып тазалаймыз',
-    hero_h1: '<span class="hero__line">Жұмсақ жиһазды <i>терең</i></span>' +
-             '<span class="hero__line">химиялық тазалау —</span>' +
+    hero_h1: '<span class="hero__line">Жұмсақ жиһазды</span>' +
+             '<span class="hero__line"><i>терең</i> тазалау —</span>' +
              '<span class="hero__line hero__line--accent">үйіңізде</span>',
     hero_sub: "Дивандар, матрастар, кілемдер және сәби арбалары. Америкалық эко-химия, Германия мен Италия " +
               "экстракторлары — кірді қаптаманың бетіне жағып тастамай, толтырғыштың тереңінен шығарамыз.",

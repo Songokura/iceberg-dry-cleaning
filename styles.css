@@ -16,7 +16,9 @@
   --cyan-l:  #7deefc;
   --cyan-d:  #0e9db5;
   --gold:    #e8b86a;
-  --font-d:  "Unbounded", "Arial Black", sans-serif;
+  /* дисплейный шрифт обязан покрывать казахские ә ғ қ ң ө ұ ү һ і.
+     Unbounded их НЕ содержит — буквы падали в системный serif. Geologica покрывает. */
+  --font-d:  "Geologica", "Segoe UI", "Arial Black", sans-serif;
   --font-t:  "Manrope", "Segoe UI", sans-serif;
   --radius:  20px;
   --header-h: 72px;
