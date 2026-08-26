@@ -498,9 +498,12 @@ body::after {
 .certs__head { margin-bottom: 30px; }
 .certs__title { font: 500 clamp(20px, 2.4vw, 28px)/1.25 var(--font-d); max-width: 24ch; }
 .certs__grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 420px)); gap: 20px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 330px)); gap: 20px;
   justify-content: center;
 }
+/* реальное фото клиента низкого разрешения (325px) — колонку держим узкой,
+   чтобы не растягивать его и не ловить мыло */
+.cert--photo img { object-position: 50% 22%; }
 .cert {
   border-radius: var(--radius); overflow: hidden; background: var(--deep);
   box-shadow: 0 22px 54px -26px rgba(10,36,54,.45);
@@ -737,7 +740,7 @@ body::after {
   .trust__stats { grid-template-columns: 1fr 1fr; gap: 10px; }
   .stat { padding: 18px 16px; }
 
-  .certs__grid { grid-template-columns: 1fr; }
+  .certs__grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
   .ba__thumb { width: calc(25% - 9px); min-width: 76px; }
   .ba__thumb span { font-size: 9px; padding: 12px 4px 6px; }
 
