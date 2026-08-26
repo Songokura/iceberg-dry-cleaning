@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Geologica:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 
   <script type="application/ld+json">
   {
@@ -226,28 +226,45 @@
       <div class="section__head reveal">
         <p class="section__label" data-i18n="ba_label">Разница очевидна</p>
         <h2 class="section__title" data-i18n="ba_h2">До <span class="thin">/</span> после</h2>
-        <p class="section__note" data-i18n="ba_note">Потяните ползунок. Живые примеры наших работ — в Instagram,
-        в актуальном «До и после».</p>
+        <p class="section__note" data-i18n="ba_note">Настоящие работы наших мастеров — без стоковых картинок
+        и ретуши. Так же снимаем каждый заказ.</p>
       </div>
-      <div class="ba__frame reveal" id="baSlider" role="slider" aria-label="Сравнение до и после химчистки" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
-        <img class="ba__img" id="baAfterImg" src="assets/after-01.webp" alt="Мебель после химчистки: чистая яркая обивка" loading="lazy" decoding="async">
-        <div class="ba__clip" id="baClip">
-          <img class="ba__img" id="baBeforeImg" src="assets/before-01.webp" alt="Та же мебель до химчистки: тусклая ткань с пятнами" loading="lazy" decoding="async">
-        </div>
-        <div class="ba__handle" id="baHandle" aria-hidden="true">
-          <span class="ba__grip"><svg viewBox="0 0 24 24" fill="none"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </div>
-        <span class="ba__tag ba__tag--before" aria-hidden="true" data-i18n="ba_before">до</span>
-        <span class="ba__tag ba__tag--after" aria-hidden="true" data-i18n="ba_after">после</span>
+      <div class="works">
+        <figure class="work reveal">
+          <img src="assets/work-01.webp" alt="Диван до и после химчистки: пятна с сиденья убраны" loading="lazy" decoding="async">
+          <figcaption data-i18n="w1">Диван, тканевая обивка</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/work-02.webp" alt="Кресло со светлой обивкой до и после химчистки" loading="lazy" decoding="async">
+          <figcaption data-i18n="w2">Кресло, светлая обивка</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/work-03.webp" alt="Комплект стульев до и после химчистки обивки" loading="lazy" decoding="async">
+          <figcaption data-i18n="w3">Стулья, комплект</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/work-04.webp" alt="Матрас до и после химчистки" loading="lazy" decoding="async">
+          <figcaption data-i18n="w4">Матрас</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/work-05.webp" alt="Велюровое кресло до и после химчистки" loading="lazy" decoding="async">
+          <figcaption data-i18n="w5">Кресло, велюр</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/work-06.webp" alt="Угловой диван до и после выездной химчистки" loading="lazy" decoding="async">
+          <figcaption data-i18n="w6">Угловой диван</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/work-07.webp" alt="Сиденье дивана до и после химчистки" loading="lazy" decoding="async">
+          <figcaption data-i18n="w7">Диван, сиденье</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/work-08.webp" alt="Матрас с пятнами до и после химчистки" loading="lazy" decoding="async">
+          <figcaption data-i18n="w8">Матрас, пятна</figcaption>
+        </figure>
       </div>
-      <div class="ba__thumbs reveal" id="baThumbs" role="tablist" aria-label="Выбор примера до/после">
-        <button class="ba__thumb is-active" type="button" data-pair="01" aria-label="Пример 1: диван"><img src="assets/pair-01-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t01">Диван</span></button>
-        <button class="ba__thumb" type="button" data-pair="02" aria-label="Пример 2: диван из ткани"><img src="assets/pair-02-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t02">Обивка</span></button>
-        <button class="ba__thumb" type="button" data-pair="03" aria-label="Пример 3: кресло"><img src="assets/pair-03-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t03">Кресло</span></button>
-        <button class="ba__thumb" type="button" data-pair="04" aria-label="Пример 4: диван и ковёр"><img src="assets/pair-04-thumb.webp" alt="" loading="lazy" decoding="async"><span data-i18n="ba_t04">Текстиль</span></button>
-      </div>
-      <p class="ba__note reveal" data-i18n="ba_disc">Фото-иллюстрация. Реальные работы смотрите в
-        <a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a> —
+      <p class="ba__note reveal" data-i18n="ba_disc">Ещё больше работ —
+        <a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a>,
         хайлайт «До и после».</p>
     </div>
   </section>
@@ -344,16 +361,16 @@
           <h3 class="certs__title" data-i18n="cert_h3">Обучение, подтверждённое документами</h3>
         </div>
         <div class="certs__grid">
+          <figure class="cert reveal">
+            <img src="assets/cert-01.webp" alt="Сертификат Школы клининга №2162/21 на имя Алмаза Матрекова, курс «Организация клинингового процесса на объекте», 2021 год" loading="lazy" decoding="async">
+            <figcaption data-i18n="cert_c1">Школа клининга · Алматы · 2021</figcaption>
+          </figure>
           <figure class="cert cert--photo reveal">
             <img src="assets/cert-photo.webp" alt="Мастеру Iceberg вручают сертификат на профессиональном семинаре" loading="lazy" decoding="async">
             <figcaption data-i18n="cert_c0">Вручение сертификата мастеру</figcaption>
           </figure>
           <figure class="cert reveal">
-            <img src="assets/cert-01.webp" alt="Обучение мастера: школа клининга, Алматы" loading="lazy" decoding="async">
-            <figcaption data-i18n="cert_c1">Школа клининга · Алматы</figcaption>
-          </figure>
-          <figure class="cert reveal">
-            <img src="assets/cert-02.webp" alt="Обучение мастера: центр Тараса Дударя, Россия" loading="lazy" decoding="async">
+            <img src="assets/cert-02.webp" alt="Обучение мастера в центре Тараса Дударя, Россия" loading="lazy" decoding="async">
             <figcaption data-i18n="cert_c2">Центр Тараса Дударя · Россия</figcaption>
           </figure>
         </div>
@@ -508,6 +525,6 @@
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4 0-.6.1-.8l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
   </a>
 
-  <script src="script.js?v=6" defer></script>
+  <script src="script.js?v=7" defer></script>
 </body>
 </html>

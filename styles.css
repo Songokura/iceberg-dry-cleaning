@@ -329,51 +329,19 @@ body::after {
 .services__min b { color: var(--ink); font-weight: 800; }
 
 /* ─────────── до / после ─────────── */
-.ba__frame {
-  position: relative; border-radius: calc(var(--radius) + 6px); overflow: hidden;
-  aspect-ratio: 3 / 2; max-height: 640px; width: 100%;
-  cursor: ew-resize; touch-action: pan-y; user-select: none;
-  box-shadow: 0 30px 80px -30px rgba(0,0,0,.6);
-  --pos: 50%;
+/* галерея реальных работ клиента (пришли 26.08.2026, заменили слайдер со стоком) */
+.works { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.work {
+  border-radius: var(--radius); overflow: hidden; background: var(--deep);
+  box-shadow: 0 20px 48px -28px rgba(0,0,0,.65);
+  transition: transform .5s var(--ease-out), box-shadow .5s;
 }
-.ba__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-.ba__clip { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
-.ba__handle {
-  position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px;
-  background: var(--cyan-l); box-shadow: 0 0 20px rgba(86,220,236,.8);
+.work img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.work figcaption {
+  padding: 12px 14px 14px; text-align: center;
+  font: 600 12.5px/1.35 var(--font-t); color: var(--muted-l);
 }
-.ba__grip {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  width: 52px; height: 52px; border-radius: 50%;
-  background: var(--cyan); color: var(--abyss);
-  display: grid; place-items: center;
-  box-shadow: 0 6px 24px rgba(6,22,33,.5);
-}
-.ba__grip svg { width: 24px; height: 24px; }
-.ba__tag {
-  position: absolute; bottom: 18px;
-  font: 600 12px/1 var(--font-d); letter-spacing: .18em; text-transform: uppercase;
-  padding: 10px 16px; border-radius: 100px; backdrop-filter: blur(8px);
-}
-.ba__tag--before { left: 18px; background: rgba(6,22,33,.55); color: #cfe4ec; }
-.ba__tag--after  { right: 18px; background: rgba(86,220,236,.85); color: var(--abyss); }
-.ba__thumbs { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
-.ba__thumb {
-  position: relative; border: 0; padding: 0; cursor: pointer; background: none;
-  border-radius: 14px; overflow: hidden; width: 118px;
-  outline: 2px solid transparent; outline-offset: 2px;
-  transition: outline-color .25s, transform .35s var(--ease-out), opacity .3s;
-  opacity: .55;
-}
-.ba__thumb img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
-.ba__thumb span {
-  position: absolute; left: 0; right: 0; bottom: 0;
-  font: 700 10.5px/1 var(--font-t); letter-spacing: .1em; text-transform: uppercase;
-  color: #fff; background: linear-gradient(transparent, rgba(6,22,33,.85));
-  padding: 16px 8px 8px; text-align: center;
-}
-.ba__thumb:hover { opacity: .85; transform: translateY(-3px); }
-.ba__thumb.is-active { opacity: 1; outline-color: var(--cyan); }
+.work:hover { transform: translateY(-6px); box-shadow: 0 30px 64px -28px rgba(0,0,0,.75); }
 .ba__note { margin-top: 18px; font-size: 13.5px; color: var(--muted-l); text-align: center; }
 .ba__note a { color: var(--cyan); border-bottom: 1px solid rgba(86,220,236,.4); }
 
@@ -726,8 +694,7 @@ body::after {
   .card__price { font-size: 12px; }
   .card__arr { display: none; }
 
-  .ba__frame { aspect-ratio: 4/3; }
-  .ba__grip { width: 44px; height: 44px; }
+  .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .steps li { padding: 20px 0; }
   .process__chip { left: 10px; right: 10px; bottom: 12px; max-width: none; }
@@ -741,8 +708,8 @@ body::after {
   .stat { padding: 18px 16px; }
 
   .certs__grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
-  .ba__thumb { width: calc(25% - 9px); min-width: 76px; }
-  .ba__thumb span { font-size: 9px; padding: 12px 4px 6px; }
+  .works { gap: 12px; }
+  .work figcaption { padding: 10px 8px 12px; font-size: 11.5px; }
 
   .footer__inner { flex-direction: column; }
   .fab { right: 16px; bottom: 16px; width: 54px; height: 54px; }

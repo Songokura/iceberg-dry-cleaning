@@ -167,76 +167,6 @@
     bergCounter.textContent = "90";
   }
 
-  /* ───────── слайдер «до/после» ───────── */
-  var ba = document.getElementById("baSlider");
-  if (ba) {
-    var pos = 50, dragging = false;
-    function setPos(v) {
-      pos = Math.min(100, Math.max(0, v));
-      ba.style.setProperty("--pos", pos + "%");
-      ba.setAttribute("aria-valuenow", Math.round(pos));
-    }
-    function posFromEvent(e) {
-      var rect = ba.getBoundingClientRect();
-      var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
-      setPos((x / rect.width) * 100);
-    }
-    ba.addEventListener("pointerdown", function (e) {
-      dragging = true;
-      ba.setPointerCapture && ba.setPointerCapture(e.pointerId);
-      posFromEvent(e);
-    });
-    ba.addEventListener("pointermove", function (e) { if (dragging) posFromEvent(e); });
-    ["pointerup", "pointercancel"].forEach(function (ev) {
-      ba.addEventListener(ev, function () { dragging = false; });
-    });
-    ba.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft") { setPos(pos - 4); e.preventDefault(); }
-      if (e.key === "ArrowRight") { setPos(pos + 4); e.preventDefault(); }
-    });
-    // лёгкая «приманка»: покачивание, пока не тронули
-    if (!reduceMotion) {
-      var teased = false, t0 = null;
-      var teaseIO = new IntersectionObserver(function (en) {
-        if (en[0].isIntersecting && !teased) {
-          teased = true;
-          var start = null;
-          function tease(ts) {
-            if (dragging) return;
-            if (!start) start = ts;
-            var el = ts - start;
-            if (el > 1600) { setPos(50); return; }
-            setPos(50 + Math.sin(el / 1600 * Math.PI * 2) * 7);
-            requestAnimationFrame(tease);
-          }
-          requestAnimationFrame(tease);
-          teaseIO.disconnect();
-        }
-      }, { threshold: 0.5 });
-      teaseIO.observe(ba);
-    }
-  }
-
-  /* ───────── галерея пар «до/после» ───────── */
-  var thumbs = document.getElementById("baThumbs");
-  if (thumbs && ba) {
-    var beforeImg = document.getElementById("baBeforeImg");
-    var afterImg = document.getElementById("baAfterImg");
-    thumbs.addEventListener("click", function (e) {
-      var btn = e.target.closest ? e.target.closest(".ba__thumb") : null;
-      if (!btn) return;
-      var pair = btn.getAttribute("data-pair");
-      if (!pair) return;
-      thumbs.querySelectorAll(".ba__thumb").forEach(function (b) {
-        b.classList.toggle("is-active", b === btn);
-      });
-      beforeImg.src = "assets/before-" + pair + ".webp";
-      afterImg.src = "assets/after-" + pair + ".webp";
-      ba.style.setProperty("--pos", "50%");
-      ba.setAttribute("aria-valuenow", "50");
-    });
-  }
-
   /* ───────── счётчики статистики ───────── */
   var nums = document.querySelectorAll(".stat__num");
   function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
@@ -377,10 +307,16 @@
     /* до / после */
     ba_label: "Айырмашылық көрініп тұр",
     ba_h2: 'Дейін <span class="thin">/</span> кейін',
-    ba_note: "Тұтқаны жылжытыңыз. Жұмыстарымыздың нақты мысалдары — Instagram парақшасындағы «До и после» бөлімінде.",
-    ba_before: "дейін", ba_after: "кейін",
-    ba_t01: "Диван", ba_t02: "Қаптама", ba_t03: "Кресло", ba_t04: "Тоқыма",
-    ba_disc: "Фото-иллюстрация. Нақты жұмыстар — " + A + " парақшасындағы «До и после» бөлімінде.",
+    ba_note: "Шеберлеріміздің нақты жұмыстары — сток суреттерсіз және ретушьсіз. Әр тапсырысты осылай түсіреміз.",
+    w1: "Диван, мата қаптама",
+    w2: "Кресло, ашық түсті қаптама",
+    w3: "Орындықтар, жиынтық",
+    w4: "Матрас",
+    w5: "Кресло, велюр",
+    w6: "Бұрыштық диван",
+    w7: "Диван, отыратын бөлігі",
+    w8: "Матрас, дақтар",
+    ba_disc: "Жұмыстар тағы да көп — " + A + " парақшасындағы «До и после» бөлімінде.",
 
     /* процесс */
     proc_chip_b: "Германия · Италия",
@@ -431,7 +367,7 @@
     cert_label: "Сертификаттар",
     cert_h3: "Құжатпен расталған оқу",
     cert_c0: "Шеберге сертификат тапсыру",
-    cert_c1: "Клининг мектебі · Алматы",
+    cert_c1: "Клининг мектебі · Алматы · 2021",
     cert_c2: "Тарас Дударь орталығы · Ресей",
 
     /* отзывы */
