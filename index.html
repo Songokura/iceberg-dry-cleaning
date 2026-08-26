@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Geologica:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 
   <script type="application/ld+json">
   {
@@ -47,6 +47,11 @@
       "addressCountry": "KZ"
     },
     "areaServed": { "@type": "City", "name": "Астана" },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00", "closes": "22:00"
+    }],
     "priceRange": "₸₸",
     "sameAs": ["https://www.instagram.com/dry_cleaning_iceberg"]
   }
@@ -111,7 +116,7 @@
       <ul class="hero__badges reveal" aria-label="Ключевые факты" data-i18n="hero_badges" data-i18n-al="hero_badges_al">
         <li><b>5 лет</b><span>на рынке Астаны</span></li>
         <li><b>11 200</b><span>подписчиков в Instagram</span></li>
-        <li><b>2 сертификата</b><span>профессионального мастера</span></li>
+        <li><b>2 сертификата</b><span>профессионального мастера</span></li><li><b>8:00 – 22:00</b><span>ежедневно, без выходных</span></li>
       </ul>
     </div>
     <div class="hero__scroll" aria-hidden="true"><span></span></div>
@@ -467,6 +472,10 @@
           <div class="qa__body"><p data-i18n="a5">Просто наберите заказ на сумму от 20 000 ₸ — паровую дезинфекцию мебели сделаем бесплатно.</p></div>
         </details>
         <details class="qa">
+          <summary><span data-i18n="q7">Во сколько можно вызвать мастера?</span><span class="qa__ico" aria-hidden="true"></span></summary>
+          <div class="qa__body"><p data-i18n="a7">Работаем каждый день с 8:00 до 22:00, выходных нет. Удобное время согласуем в WhatsApp — обычно приезжаем в день обращения или на следующий.</p></div>
+        </details>
+        <details class="qa">
           <summary><span data-i18n="q6">Где посмотреть ваши работы?</span><span class="qa__ico" aria-hidden="true"></span></summary>
           <div class="qa__body"><p data-i18n="a6">В Instagram <a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a>: хайлайты «До и после», «Отзывы», «Видеоотзывы», «Сертификаты».</p></div>
         </details>
@@ -486,6 +495,7 @@
           <li><span data-i18n="ct_l2">WhatsApp / Telegram</span><a href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку." data-wa-kk="Сәлеметсіз бе! Химиялық тазалауға тапсырыс бергім келеді.">+7 700 111 90 42</a></li>
           <li><span data-i18n="ct_l3">Instagram</span><a href="https://www.instagram.com/dry_cleaning_iceberg" target="_blank" rel="noopener">@dry_cleaning_iceberg</a></li>
           <li><span data-i18n="ct_l4">Адрес</span><b data-i18n="ct_addr">Астана, ул. Манатау, 17 · выезд по всему городу</b></li>
+          <li><span data-i18n="ct_l5">Часы работы</span><b data-i18n="ct_hours">Ежедневно, 8:00 – 22:00 · без выходных</b></li>
         </ul>
       </div>
       <form class="contact__form reveal" id="leadForm" novalidate>
@@ -524,7 +534,7 @@
         <img class="brand__mark" src="assets/logo.svg" alt="" width="38" height="38" loading="lazy">
         <span class="brand__text">ICEBERG<em>dry cleaning</em></span>
       </a>
-      <p class="footer__addr" data-i18n="foot_addr">Астана, ул. Манатау, 17<br>Выездная химчистка мягкой мебели</p>
+      <p class="footer__addr" data-i18n="foot_addr">Астана, ул. Манатау, 17 · ежедневно 8:00 – 22:00<br>Выездная химчистка мягкой мебели</p>
       <div class="footer__links">
         <a href="tel:+77086983563">+7 708 698 35 63</a>
         <a href="https://wa.me/77001119042" data-wa="Здравствуйте! Хочу заказать химчистку." data-wa-kk="Сәлеметсіз бе! Химиялық тазалауға тапсырыс бергім келеді.">WhatsApp</a>
@@ -539,6 +549,6 @@
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4 0-.6.1-.8l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
   </a>
 
-  <script src="script.js?v=8" defer></script>
+  <script src="script.js?v=9" defer></script>
 </body>
 </html>
