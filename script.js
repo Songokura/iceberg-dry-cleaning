@@ -515,7 +515,13 @@
     if (b) apply(b.getAttribute("data-lang"));
   });
 
+  // Язык из ?lang= в URL важнее сохранённого выбора: реклама Google Ads ведёт на русскую
+  // версию, а у посетителя в localStorage может лежать kk - это посадочная на языке,
+  // которого нет в таргетинге, и основание для отклонения объявления.
+  var forced = (location.search.match(/[?&]lang=(ru|kk)/) || [])[1];
   var saved = null;
   try { saved = localStorage.getItem("iceberg-lang"); } catch (e) {}
-  if (saved === "kk") apply("kk");
+  var lang = forced || saved;
+  if (lang === "kk") apply("kk");
+  else if (forced === "ru" && saved === "kk") apply("ru");
 })();

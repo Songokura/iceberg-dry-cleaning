@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://songokura.github.io/iceberg-dry-cleaning/sitemap.xml
+Sitemap: https://drycleaningiceberg.kz/sitemap.xml
