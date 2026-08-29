@@ -2,3 +2,5 @@ _project/
 .claude/
 .DS_Store
 *.log
+_deploy/
+*.zip
