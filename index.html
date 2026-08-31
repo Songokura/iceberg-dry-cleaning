@@ -8,6 +8,41 @@
   <link rel="canonical" href="https://drycleaningiceberg.kz/">
   <meta name="theme-color" content="#061621">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18418351828"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18418351828');
+
+    /* Конверсии Google Ads. ID вынесены сюда, чтобы менялись в одном месте. */
+    window.ADS_CONV = {
+      phone: 'AW-18418351828/bPDCCO2j_-ocENT9xs5E',  // Интерактивные номера телефонов
+      lead:  'AW-18418351828/A36yCJqn_-ocENT9xs5E',  // Отправка формы для потенциальных клиентов
+      contact: 'AW-18418351828/Q8UKCLnF_-ocENT9xs5E' // Контакт (WhatsApp)
+    };
+
+    /* Отправка конверсии; url задаётся только там, где нужен переход после отправки. */
+    function gtag_report_conversion(sendTo, url) {
+      var done = false;
+      var go = function () {
+        if (done) return; done = true;
+        if (typeof url !== 'undefined' && url) window.location = url;
+      };
+      try {
+        gtag('event', 'conversion', {
+          'send_to': sendTo,
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': go
+        });
+      } catch (e) { go(); }
+      if (typeof url !== 'undefined' && url) setTimeout(go, 900);
+      return false;
+    }
+  </script>
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="Iceberg Dry Cleaning">
@@ -29,7 +64,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Geologica:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=20260829-1">
+  <link rel="stylesheet" href="styles.css?v=20260831-1">
 
   <script type="application/ld+json">
   {
@@ -554,6 +589,6 @@
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4 0-.6.1-.8l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
   </a>
 
-  <script src="script.js?v=20260829-1" defer></script>
+  <script src="script.js?v=20260831-1" defer></script>
 </body>
 </html>

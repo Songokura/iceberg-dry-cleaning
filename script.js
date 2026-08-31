@@ -5,6 +5,17 @@
   "use strict";
 
   var WA_PHONE = "77001119042";
+
+  /* Конверсии Google Ads: id лежат в window.ADS_CONV (index.html).
+     Обёртка молчит, если gtag не загрузился (блокировщик, оффлайн). */
+  function conv(key, url) {
+    var c = window.ADS_CONV || {};
+    if (typeof window.gtag_report_conversion === "function" && c[key]) {
+      window.gtag_report_conversion(c[key], url);
+    } else if (url) {
+      window.location = url;
+    }
+  }
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // служебный режим для скриншотов: ?shot
@@ -26,11 +37,12 @@
       e.preventDefault();
       var url = "https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(wa);
       window.open(url, "_blank", "noopener");
-      // сюда позже добавится gtag('event', 'whatsapp_click', ...)
+      conv("contact");
       return;
     }
     if (a.href && a.href.indexOf("tel:") === 0) {
-      // сюда позже добавится gtag('event', 'phone_click', ...)
+      // переход по tel: страницу не выгружает — событие успевает уйти без redirect-колбэка
+      conv("phone");
     }
   });
 
@@ -236,7 +248,7 @@
           "Телефон: " + phone +
           (msg ? "\nЧто почистить: " + msg : "");
       window.open("https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(text), "_blank", "noopener");
-      // сюда позже добавится gtag('event', 'lead_form_submit', ...)
+      conv("lead");
       if (thanks) thanks.hidden = false;
       form.reset();
       setTimeout(function () { if (thanks) thanks.hidden = true; }, 9000);
